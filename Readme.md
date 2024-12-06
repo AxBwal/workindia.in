@@ -118,7 +118,7 @@ The server will run at: `http://localhost:3000`.
 ### **Authentication**
 
 #### **User Signup**
-- **URL:** `POST /auth/signup`
+- **URL:** `POST /auth/register`
 - **Request Body:**
   ```json
   {
@@ -167,24 +167,32 @@ The server will run at: `http://localhost:3000`.
     "availableSeats": 100
   }
   ```
+
+  - **Headers:**
+  ```json
+  {
+    "Authorization": "Bearer jwt_token_here"
+  }
+  ```
+
 - **Response:**
   ```json
   {
     "message": "Train added successfully",
-    "train": { ... }
+    "train": {  }
   }
   ```
 
 #### **Get Seat Availability**
-- **URL:** ` GET /train/availability?source=Delhi&destination=Mumbai`
+- **URL:** ` GET /train/availability?source=City A & destination=City B`
 - **Response:**
   ```json
   [
     {
         "id": 1,
-        "name": "Express 101",
-        "source": "Delhi",
-        "destination": "Mumbai",
+        "name": "Express Train",
+        "source": "City A",
+        "destination": "City B",
         "totalSeats": 100,
         "availableSeats": 100
     }
@@ -239,8 +247,8 @@ The server will run at: `http://localhost:3000`.
     "trainId": 1,
     "seatCount": 2,
     "createdAt": "2024-12-05T12:00:00.000Z",
-    "user": { ... },
-    "train": { ... }
+    "user": {  },
+    "train": {  }
   }
   ```
 
