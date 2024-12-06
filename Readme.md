@@ -67,7 +67,7 @@ train-booking-system/
 
 ### **1. Clone the Repository**
 ```bash
-git clone https://github.com/yourusername/train-booking-system.git
+git clone https://github.com/AxBwal/workindia.in.git
 ```
 
 ### **2. Install Dependencies**
